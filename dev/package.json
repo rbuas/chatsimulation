@@ -1,0 +1,30 @@
+{
+  "name": "tools.chatsimulator",
+  "version": "1.0.0",
+  "description": "Chat simulator with angular 1",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "start": "http-server -p 8090",
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "pack": "gulp pack"
+  },
+  "author": "Rodrigo Buas",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-json-editor": "^2.2.1",
+    "gulp-less": "^3.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-zip": "^3.2.0",
+    "yargs": "^6.6.0"
+  }
+}

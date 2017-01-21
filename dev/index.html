@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="ChatApp">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+        <title>ChatApp Simulator</title>
+        <meta name="description" content="Chat simulator" />
+        <meta name="author" content="Rodrigo Buas" />
+        <meta name="canonical" content="" />
+
+        <!-- EXTERNAL LIBRARIES -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="/script/ie-fix.js"></script>
+        <![endif]-->
+
+        <!-- CUSTOM STYLE -->
+        <link rel="stylesheet" href="./styles/main.min.css" />
+    </head>
+    <body id="page-body" ng-controller="ChatAppController as cac">
+
+        <ng-include src="'./views/default.html'"></ng-include>
+
+        <!-- EXT -->
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+        <!-- Angular -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- SCRIPTS -->
+        <script src="./scripts/pack.min.js"></script>
+    </body>
+</html>

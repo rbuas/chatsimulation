@@ -1,0 +1,10 @@
+{
+    "styleinput" : ["styles/main.less"],
+    "stylefiles" : ["styles/*.less"],
+    "styleoutput" : "styles/",
+    "scriptfiles" : [
+        "scripts/chatapp.js"
+    ],
+    "scriptsoutput" : "scripts/",
+    "scriptspack" : "pack.js"
+}

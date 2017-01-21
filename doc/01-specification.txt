@@ -1,0 +1,16 @@
+Simulate a chat in a single page application.
+
+Functionalities : 
+- communicate n users connected in n differents browser windos 
+- responsive design
+- save localy history
+
+Non functional requirements : 
+- all project develloped in front-end : JavaScript/HTML/CSS
+- use a framework
+- code readability
+- code extensibility
+- code non-repeatability
+- code homogeneity
+
+Mockup : /doc/02-mockup.gif

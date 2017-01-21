@@ -1,0 +1,27 @@
+sprint of 60 min
+1pt = 10min
+release R1 = 4h = 4 sprints
+capacity = 6pt by sprint
+
+SPRINT 1 (6): V0.1
+- H01 (1)[0.5] : write specifications
+- H02 (1)[0.5] : search for differents solutions on internet to choose the solution to get
+- H03 (0.5)[0.5] : collect resources and create the files structures
+- H04 (1)[0.5] : create and split project into histories
+- H05 (2)[1.5] : create a version 0 with basic visual to working on it after
+- H06 (0.5)[0.5] : close the version and the sprint then publicate into a repository
+
+SPRINT 2 (6): V0.2
+- H07 (2.5) : create page ui login
+- H08 (3) : create page ui chat
+- H09 (0.5) : close the version and the sprint then publicate into a repository
+
+SPRINT 3 (6) : V0.3
+- H10 (2.5) : create the login functionality
+- H11 (2) : create the chat functionality
+- H12 (0.5) : close the version and the sprint then publicate into a repository
+
+SPRINT 4 (6) : V0.4
+- H13 (3.5) : create the history functionality
+- H14 (2) : release testes and finetunnig
+- H15 (0.5) : close the version and the sprint then publicate into a repository
