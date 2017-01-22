@@ -1,0 +1,22 @@
+{
+    "APPNAME": "ChatApp",
+    "ERROR_COMMUNICATION": "Ops ! Me desculpe, ocorreu um error de comunicação.",
+    "ERROR_NICKNAME": "Apelido inválido, tente outro.",
+    "ERROR_HASUSER": "Instância já possui um usuário registrado, abra outra janela para conversar com um novo usuário.",
+    "ERROR_USERTWICE": "Você já está conectado. O que você faz aqui ?",
+    "ERROR_USERLOGGED": "Já existe um utilizador conectado com este apelido, tente novamente com outro apelido.",
+    "ERROR_MESSAGEWITHOUTUSER": "Desculpe, você precisa estar logado para enviar uma menssagem.",
+    "INVALID_MESSAGE": "Mensagem inválida, por favor, escreva uma mensagem válida.",
+    "CHATAPP_COPYRIGHT": "ChatApp Simulação",
+    "INSCRIPTION_TITLE": "inscrição",
+    "INSCRIPTION_TEXT": "Digite seu apelido para testar a simulação de bate-papo",
+    "ERROR": "Erro",
+    "LOGGIN_VALIDATION": "Introduza o seu apelido.",
+    "LOGGIN_PLACEHOLDER": "apelido",
+    "LOGGIN_BUTTON": "começar chat",
+    "USERS": "Usuários",
+    "CHAT_TEXT": "batendo papo",
+    "MESSAGE_PLACEHOLDER": "mensagem",
+    "MESSAGE_VALIDATION": "Introduza uma mensagem.",
+    "SENDMESSAGE_BUTTON": "enviar"
+}

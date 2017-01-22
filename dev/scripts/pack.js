@@ -6,7 +6,9 @@ ChatApp = (function($, angular) {
         common : {},
         ready : false,
         users : [],
-        history : []
+        history : [],
+        lang : "en",
+        languages : ["en", "fr", "pt"]
     };
 
     chatapp.broadcast = function (event, data) {
@@ -30,8 +32,21 @@ ChatApp = (function($, angular) {
 
     chatapp.connect = function () {
         var self = this;
+
+        // get update from other instances
         self.updateFromDB();
-        self.request("/common.json").then(function(response) {
+
+        // update resources by language
+        self.updateResources();
+
+        self.pulling = self.interval(function() { return self.broadcastUpdates(); }, 2000);
+    }
+
+    chatapp.updateResources = function () {
+        var self = this;
+        var currentLang = self.state.lang || "en";
+        var commonFile = "/common-" + currentLang + ".json";
+        self.request(commonFile).then(function(response) {
             if (!response || !response.data) {
                 console.log("ERROR_COMMUNICATION");
             } else {
@@ -40,7 +55,16 @@ ChatApp = (function($, angular) {
                 self.broadcast("common", response.data);
             }
         });
-        self.pulling = self.interval(function() { return self.broadcastUpdates(); }, 2000);
+        
+    }
+
+    chatapp.changeLanguage = function (lang) {
+        var self = this;
+        if(!lang || self.state.languages.indexOf(lang) < 0)
+            return;
+
+        self.state.lang = lang;
+        self.updateResources();
     }
 
     chatapp.deconnect = function() {
@@ -96,16 +120,16 @@ ChatApp = (function($, angular) {
         // test exceptions
 
         if(!trim(nickname))
-            return "Invalid nickname, please try another one.";
+            return self.common("ERROR_NICKNAME");
 
         if(self.state.loggedUser)
-            return "Instance with registered user, please open another window to chat with a new user.";
+            return self.common("ERROR_HASUSER");
 
         if(self.state.loggedUser == nickname)
-            return "You are already logged. What do you do here ?";
+            return self.common("ERROR_USERTWICE");
 
         if(self.state.users.indexOf(nickname) >= 0)
-            return "There is already a user connected with this nickname, please try again with another nickname.";
+            return self.common("ERROR_USERLOGGED");
 
         // register a new user
 
@@ -127,11 +151,11 @@ ChatApp = (function($, angular) {
 
         // test exceptions
 
-        if(!trim(message))
-            return "Invalid message, please write a valid message.";
-
         if(!self.hasLoggedUser())
-            return "I'm sorry, I cant delivery your message, please try again.";
+            return self.common("ERROR_MESSAGEWITHOUTUSER");;
+
+        if(!trim(message))
+            return self.common("ERROR_INVALIDMESSAGE");
 
         // send the message
         var date = new Date();
@@ -177,11 +201,12 @@ ChatApp = (function($, angular) {
             cac.registerError = "";
             cac.newMessage = "";
             cac.messageError = "";
+            cac.languages = chatapp.state.languages || [];
             cac.updateState();
         }
 
-        cac.I = function (key) {
-            return chartapp.coomon(key);
+        cac.i = function (key) {
+            return chatapp.common(key);
         }
 
         cac.register = function() {
@@ -197,6 +222,11 @@ ChatApp = (function($, angular) {
 
         cac.updateCommon = function(e, common) {
             cac.ready = chatapp.state.ready;
+            cac.updateLanguage();
+        }
+
+        cac.updateLanguage = function(e, lang) {
+            cac.lang = lang || chatapp.state.lang;
         }
 
         cac.updateUserState = function () {
@@ -222,6 +252,13 @@ ChatApp = (function($, angular) {
 
         cac.updateHistory = function (e, history) {
             cac.history = Object.assign({}, history);
+        }
+
+        cac.changeLanguage = function (lang) {
+            if(!lang)
+                return;
+
+            chatapp.changeLanguage(lang);
         }
 
         $scope.$on("common", cac.updateCommon );

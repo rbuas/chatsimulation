@@ -1,9 +1,17 @@
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header card">
-            <a class="navbar-brand card" href="#page-top">ChatApp</a>
+        <div class="col-xs-12 navbar-header card">
+            <div class="btn-lang collapsed" data-toggle="collapse" data-target="#langoptions">
+                <img ng-src="/images/lang-{{cac.lang}}.png" />
+                <div id="langoptions" class="langoptions collapse">
+                    <img ng-repeat="(key, lang) in cac.languages" ng-src="/images/lang-{{lang}}.png" ng-click="cac.changeLanguage(lang)" />
+                </div>
+            </div>
+            <a class="navbar-brand card" href="#page-top">
+                <img class="img-logo" src="/images/logo.gif" />
+                {{cac.i("APPNAME")}}
+            </a>
         </div>
     </div>
 </nav>

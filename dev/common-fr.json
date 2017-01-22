@@ -1,0 +1,22 @@
+{
+    "APPNAME": "ChatApp",
+    "ERROR_COMMUNICATION": "Houla ! Je suis désolé, nous avons un problème de communication.",
+    "ERROR_NICKNAME": "Surnom invalide, essayez une autre fois s'il vous plaît.",
+    "ERROR_HASUSER": "L'instance a déjà un utilisateur enregistré, ouvrez une autre fenêtre pour discuter avec un nouvel utilisateur.",
+    "ERROR_USERTWICE": "Vous êtes déjà connecté. Que faites-vous ici ?",
+    "ERROR_USERLOGGED": "Il y a déjà un utilisateur connecté avec ce surnom, essayez à nouveau avec un autre surnom.",
+    "ERROR_MESSAGEWITHOUTUSER": "Je suis désolé, vous devez être connecté pour envoyer un message.",
+    "INVALID_MESSAGE": "Message non valide, veuillez écrire un message valide.",
+    "CHATAPP_COPYRIGHT": "ChatApp Simulation",
+    "INSCRIPTION_TITLE": "inscription",
+    "INSCRIPTION_TEXT": "entrez votre surnom pour tester la simulation de chat",
+    "ERROR": "Error",
+    "LOGGIN_VALIDATION": "Veuillez entrer votre surnom.",
+    "LOGGIN_PLACEHOLDER": "surnom",
+    "LOGGIN_BUTTON": "démarrer la discussion",
+    "USERS": "Utilizateurs",
+    "CHAT_TEXT": "chatting",
+    "MESSAGE_PLACEHOLDER": "message",
+    "MESSAGE_VALIDATION": "Veuillez entrer un message.",
+    "SENDMESSAGE_BUTTON": "envoyer"
+}

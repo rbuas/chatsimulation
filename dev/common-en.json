@@ -1,0 +1,22 @@
+{
+    "APPNAME": "ChatApp",
+    "ERROR_COMMUNICATION": "Houla ! I'm sorry, there is a communication error.",
+    "ERROR_NICKNAME": "Invalid nickname, please try another one.",
+    "ERROR_HASUSER": "Instance with registered user, please open another window to chat with a new user.",
+    "ERROR_USERTWICE": "You are already logged. What do you do here ?",
+    "ERROR_USERLOGGED": "There is already a user connected with this nickname, please try again with another nickname.",
+    "ERROR_MESSAGEWITHOUTUSER": "I'm sorry, you must be logged to send a message.",
+    "INVALID_MESSAGE": "Invalid message, please write a valid message.",
+    "CHATAPP_COPYRIGHT": "ChatApp Simulation",
+    "INSCRIPTION_TITLE": "inscription",
+    "INSCRIPTION_TEXT": "enter your nickname to test the chat simulation",
+    "ERROR": "Error",
+    "LOGGIN_VALIDATION": "Please enter your nickname.",
+    "LOGGIN_PLACEHOLDER": "nickname",
+    "LOGGIN_BUTTON": "start chat",
+    "USERS": "Users",
+    "CHAT_TEXT": "chatting",
+    "MESSAGE_PLACEHOLDER": "message",
+    "MESSAGE_VALIDATION": "Please enter a message.",
+    "SENDMESSAGE_BUTTON": "send"
+}
