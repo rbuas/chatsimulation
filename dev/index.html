@@ -19,11 +19,16 @@
         <![endif]-->
 
         <!-- CUSTOM STYLE -->
-        <link rel="stylesheet" href="./styles/main.min.css" />
+        <link href="./styles/main.min.css" rel="stylesheet" />
     </head>
     <body id="page-body" ng-controller="ChatAppController as cac">
 
-        <ng-include src="'./views/default.html'"></ng-include>
+        <ng-include src="'./views/header.html'"></ng-include>
+
+        <ng-include src="'./views/inscription.html'"></ng-include>
+        <ng-include src="'./views/chat.html'"></ng-include>
+
+        <ng-include src="'./views/footer.html'"></ng-include>
 
         <!-- EXT -->
         <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
