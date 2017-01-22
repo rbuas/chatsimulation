@@ -7,7 +7,7 @@
     "doc": "doc"
   },
   "scripts": {
-    "start": "http-server -p 8090",
+    "start": "gulp build && http-server -p 8090",
     "build": "gulp build",
     "watch": "gulp watch",
     "pack": "gulp pack"
