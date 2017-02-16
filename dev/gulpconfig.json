@@ -1,9 +1,16 @@
 {
-    "styleinput" : ["styles/main.less"],
+    "styleinput" : ["styles/main.less", "components/chat/chat.less"],
     "stylefiles" : ["styles/*.less"],
     "styleoutput" : "styles/",
     "scriptfiles" : [
-        "scripts/chatapp.js"
+        "scripts/jsext.js",
+        "components/chat/chatapp.js",
+        "components/resource/resourceservice.js",
+        "components/user/userservice.js",
+        "components/user/usercontroller.js",
+        "components/chat/chatservice.js",
+        "components/chat/chatcontroller.js",
+        "components/chat/displayusers.js"
     ],
     "scriptsoutput" : "scripts/",
     "scriptspack" : "pack.js"

@@ -6,7 +6,7 @@
     "ERROR_USERTWICE": "Vous êtes déjà connecté. Que faites-vous ici ?",
     "ERROR_USERLOGGED": "Il y a déjà un utilisateur connecté avec ce surnom, essayez à nouveau avec un autre surnom.",
     "ERROR_MESSAGEWITHOUTUSER": "Je suis désolé, vous devez être connecté pour envoyer un message.",
-    "INVALID_MESSAGE": "Message non valide, veuillez écrire un message valide.",
+    "ERROR_INVALIDMESSAGE": "Message non valide, veuillez écrire un message valide.",
     "CHATAPP_COPYRIGHT": "ChatApp Simulation",
     "INSCRIPTION_TITLE": "inscription",
     "INSCRIPTION_TEXT": "entrez votre surnom pour tester la simulation de chat",

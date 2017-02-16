@@ -22,21 +22,25 @@ var builder = {
         },
         "build" : {
             action : function() { builder.build(); }, 
+            alias : "b",
             help : "build all less and js"
         },
         "watch" : {
             action : function() { builder.watch(); }, 
+            alias : "w",
             help : "watch all less and js files"
         }
     },
     process : {},
 
     watch : function () {
+        console.log("Watching styles and scripts ...");
         builder.watchStyles();
         builder.watchScripts();
     },
 
     build : function () {
+        console.log("Building styles and scripts ...");
         builder.buildStyles();
         builder.buildScripts();
     },
@@ -44,6 +48,7 @@ var builder = {
     buildStyles : function (file) {
         builder.startProcess("buildstyles");
 
+        console.log("Building styles ...");
         return _gulp.src(file || builder.CONFIG.styleinput)
             .pipe(_less().on("error", function(err) {
                 console.log(err);
@@ -62,6 +67,7 @@ var builder = {
     },
 
     watchStyles : function () {
+        console.log("Watch styles : ", builder.CONFIG.stylefiles);
         return _gulp.watch(builder.CONFIG.stylefiles, function(event) {
             console.log("Builder::File " + event.path + " was " + event.type + "...");
             return builder.buildStyles();
@@ -71,6 +77,7 @@ var builder = {
     buildScripts : function () {
         builder.startProcess("buildscripts");
 
+        console.log("Building scripts ...");
         return _gulp.src(builder.CONFIG.scriptfiles)
             .pipe(_plumber())
             .pipe(_concat(builder.CONFIG.scriptspack))
@@ -84,6 +91,7 @@ var builder = {
     },
 
     watchScripts : function () {
+        console.log("Watch scripts : ", builder.CONFIG.scriptfiles);
         return _gulp.watch(builder.CONFIG.scriptfiles, function(event) {
             console.log("Builder::File " + event.path + " was " + event.type + "...");
             return builder.buildScripts();
@@ -95,8 +103,6 @@ var builder = {
             .pipe(_zip('pack.zip', false))
             .pipe(_gulp.dest('dist'));
     },
-
-
 
     initialize : function() {
         if(!builder || !builder.actions)
@@ -112,6 +118,9 @@ var builder = {
                 continue;
 
             _gulp.task(actionname, aconfig.action);
+            if(aconfig.alias) {
+                _gulp.task(aconfig.alias, aconfig.action);
+            }
         }
     },
 

@@ -2,7 +2,7 @@
   "name": "tools.chatsimulator",
   "version": "1.0.0",
   "description": "Chat simulator with angular 1",
-  "main": "index.js",
+  "main": "",
   "directories": {
     "doc": "doc"
   },

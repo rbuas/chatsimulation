@@ -6,7 +6,7 @@
     "ERROR_USERTWICE": "You are already logged. What do you do here ?",
     "ERROR_USERLOGGED": "There is already a user connected with this nickname, please try again with another nickname.",
     "ERROR_MESSAGEWITHOUTUSER": "I'm sorry, you must be logged to send a message.",
-    "INVALID_MESSAGE": "Invalid message, please write a valid message.",
+    "ERROR_INVALIDMESSAGE": "Invalid message, please write a valid message.",
     "CHATAPP_COPYRIGHT": "ChatApp Simulation",
     "INSCRIPTION_TITLE": "inscription",
     "INSCRIPTION_TEXT": "enter your nickname to test the chat simulation",

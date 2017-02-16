@@ -284,21 +284,7 @@ img.img-logo {
   margin-top: -12px;
   display: inline-block;
 }
-.btn-lang {
-  float: right;
-  position: relative;
-}
-.langoptions {
-  position: absolute;
-  right: 0;
-}
 textarea.form-control {
   height: auto;
   min-height: 67px;
-}
-.chat-history {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 3px 15px 10px 15px;
-  border: 1px solid #ccc;
 }
