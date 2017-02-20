@@ -34,7 +34,6 @@ ChatController = (function(angular, app) {
         }
 
         cac.sendMessage = function () {
-            debugger;
             var error = ChatService.sendMessage(cac.newMessage);
             if(error) {
                 cac.messageError = error;
